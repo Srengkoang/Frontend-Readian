@@ -1,0 +1,65 @@
+.tags-section {
+  background: linear-gradient(to bottom, #FFFDEE, #CDEDBC);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.tags-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a4d0f;
+  margin-bottom: 2rem;
+}
+
+.tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tag-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 0.8rem 1.5rem;
+  background-color: #1a4d0f; 
+  color: #FFD7DF;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Inter', sans-serif; 
+  font-size: 1.1rem;
+  font-weight: 600; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding-left: 2rem; 
+}
+
+.tag-button:hover {
+  background-color: #2e7a1e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.tag-dot {
+  width: 18px; 
+  height: 18px; 
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 12px; 
+}
+
+ @media (max-width: 900px) {
+  .tag-grid {
+    grid-template-columns: 1fr; /* Stack tags vertically on mobile */
+    max-width: 300px;
+    }
+
+    .tag-button {
+      justify-content: center; 
+      padding-left: 1.5rem;
+    }
+}

@@ -1,0 +1,102 @@
+/* === Main Section === */
+.image-section {
+  background: linear-gradient(to bottom, #C0FFB3, #FFFDEE);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-area {
+  padding-left: 5vw;
+  color: #1a4d0f;
+}
+
+.content-area h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.content-area .highlight {
+  color: #4CAF50;
+}
+
+.content-area p {
+  font-size: 1.1rem;
+  max-width: 400px;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+.browse-button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #1a4d0f;
+  color: #FFD7DF;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.browse-button:hover {
+  background-color: #2e7a1e;
+  transform: translateY(-2px);
+}
+
+.image-stack-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image-card {
+  width: 180px;
+  height: 220px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card1 { top: 40%; right: 220px; transform: translateY(-50%); z-index: 3; }
+.card2 { top: 55%; right: 120px; transform: translateY(-50%); z-index: 2; }
+.card3 { top: 70%; right: 20px; transform: translateY(-50%); z-index: 1; }
+
+.image-card:hover {
+  transform: translateY(-50%) scale(1.1);
+  z-index: 10;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .image-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 350px;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .content-area { padding-left: 0; }
+  .image-stack-wrapper { min-height: 350px; }
+
+  .card1, .card2, .card3 { right: auto; left: 50%; }
+  .card1 { top: 40%; transform: translate(-90%, -50%); }
+  .card2 { top: 55%; transform: translate(-50%, -50%); }
+  .card3 { top: 70%; transform: translate(0%, -50%); }
+}

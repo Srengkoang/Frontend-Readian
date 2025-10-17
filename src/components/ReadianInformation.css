@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    }
+                
+.readian-section {
+    background-Color: #CDEDBC;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    align-items: center;
+    padding: 4rem 5vw; 
+    }
+
+.readian-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a4d0f; 
+    margin-bottom: 1.5rem;
+    }
+
+.readian-content .brand-highlight {
+    color: #00A819; 
+    }
+                
+.readian-content p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    color: #333;
+    line-height: 1.6;
+    }
+
+.book-stack-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.book-stack-image {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    display: block;
+    }
+
+@media (max-width: 900px) {
+    .readian-section {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto;
+        text-align: center;
+        padding: 3rem 1rem;
+        }
+    .readian-content {
+        order: 2; 
+        }
+
+.book-stack-container {
+    order: 1; 
+    margin-bottom: 2rem;
+    }
+}

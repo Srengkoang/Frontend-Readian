@@ -1,0 +1,54 @@
+.signin-section {
+    background: linear-gradient(to bottom, #CDEDBC, #FFFDEE); 
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #000001; 
+}
+
+.signin-section h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+
+.signin-section p {
+    font-size: 1.2rem;
+    max-width: 550px;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.SignIn-button {
+    padding: 0.8rem 2.5rem;
+    background-color: #1a4d0f; 
+    color: pink;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.SignIn-button:hover {
+    background-color: #2e7a1e;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .signin-section h3 {
+        font-size: 1.8rem;
+    }
+    .SignIn-button {
+        width: 80%;
+    }
+}
